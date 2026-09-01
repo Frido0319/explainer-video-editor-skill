@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "mode": "edit",
+  "theme": "research_ppt",
+  "fps": 24,
+  "width": 320,
+  "height": 180,
+  "output_dir": "output",
+  "output_name": "public-edit-demo.mp4",
+  "sources": [
+    {
+      "id": "main",
+      "generator": "synthetic",
+      "duration": 3.0
+    }
+  ],
+  "operations": [
+    {
+      "type": "cut",
+      "source": "main",
+      "start": 1.0,
+      "end": 1.5,
+      "authorized": true
+    },
+    {
+      "type": "compress",
+      "source": "main",
+      "start": 2.0,
+      "end": 3.0,
+      "factor": 2.0,
+      "authorized": true
+    },
+    {
+      "type": "zoom",
+      "source": "main",
+      "start": 0.2,
+      "end": 0.8,
+      "zoom": 1.08
+    },
+    {
+      "type": "callout",
+      "start": 0.3,
+      "end": 1.2,
+      "text": "safe callout",
+      "x": 12,
+      "y": 18,
+      "width": 140,
+      "height": 36
+    }
+  ],
+  "verification": {
+    "frame_times": [0.5, 1.5],
+    "duration_tolerance": 0.25
+  }
+}
